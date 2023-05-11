@@ -6,7 +6,7 @@ import { Routes, Route } from 'react-router-dom';
 // import { lazy } from 'react';
 import { Layout } from './Layout/Layout';
 import { ContactMain } from './ContactsMain/ContactsMain';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 
 export default function App() {
   return (
