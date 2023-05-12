@@ -2,7 +2,7 @@ import css from './App.module.css';
 import { Routes, Route } from 'react-router-dom';
 import { lazy, useEffect } from 'react';
 import { Layout } from './Layout/Layout';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { refresh } from 'redux/Auth/AuthOperations';
 
 const LoginPage = lazy(() => import('../pages/Login'));

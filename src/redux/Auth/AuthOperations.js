@@ -6,8 +6,6 @@ axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
 const setAuthHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
-
-// Utility to remove JWT
 const clearAuthHeader = () => {
   axios.defaults.headers.common.Authorization = '';
 };
@@ -40,7 +38,7 @@ export const login = createAsyncThunk(
 
 export const logout = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
-    const res = await axios.post('/users/logout');
+    await axios.post('/users/logout');
     clearAuthHeader();
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
@@ -56,7 +54,8 @@ export const refresh = createAsyncThunk('auth/refresh', async (_, thunkAPI) => {
   }
   setAuthHeader(persistedToken);
   try {
-    const res = await axios.get('/users/me');
+    // setAuthHeader(persistedToken);
+    const res = await axios.get('/users/current');
     return res.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
