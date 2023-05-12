@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-import { fetchContacts } from 'redux/operation';
+// import { useEffect } from 'react';
+// import { fetchContacts } from 'redux/operation';
 import Loader from 'components/loader';
 import {
   selectIsLoading,
@@ -20,9 +20,9 @@ function ContactsList() {
 
   const visibleEl = useSelector(selectFiltredContacts);
 
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchContacts());
+  // }, [dispatch]);
 
   return (
     <ul className={css.list}>

@@ -1,34 +1,33 @@
-// import ContactsList from './ContactsList/ContactsList';
-// import Filter from './Filter/Filter';
-// import ContactForm from './ContactForm/ContactForm';
 import css from './App.module.css';
 import { Routes, Route } from 'react-router-dom';
-// import { lazy } from 'react';
+import { lazy, useEffect } from 'react';
 import { Layout } from './Layout/Layout';
-import { ContactMain } from './ContactsMain/ContactsMain';
-// import { NavLink } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { refresh } from 'redux/Auth/AuthOperations';
+
+const LoginPage = lazy(() => import('../pages/Login'));
+const RegisterPage = lazy(() => import('../pages/Register'));
+const ConstactsPage = lazy(() => import('../pages/Сontacts'));
+const HomePage = lazy(() => import('../pages/Home'));
 
 export default function App() {
+  const dispatch = useDispatch();
+  // const refteshing = useSelector(selectIsRefreshing);
+
+  useEffect(() => {
+    dispatch(refresh());
+  }, [dispatch]);
+
   return (
     <main className={css.box}>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route exact index element={<p>Home</p>} />
-          <Route path="/contacts" element={<ContactMain />} />
-          <Route path="/register" element={<p>Reg</p>} />
-          <Route path="/login" element={<p>Log in</p>} />
+          <Route exact index element={<HomePage />} />
+          <Route path="/contacts" element={<ConstactsPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Route>
       </Routes>
     </main>
   );
 }
-// (
-//   <div className={css.box}>
-//     <h2>Phonebook</h2>
-//     <ContactForm />
-//     <h2>Contacts</h2>
-//     <Filter />
-//     <ContactsList />
-//   </div>
-// );
-// }
