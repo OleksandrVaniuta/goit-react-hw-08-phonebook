@@ -8,10 +8,10 @@ function Filter() {
 
   return (
     <label className={css.filterEl}>
-      Find contacts by name
       <input
         type="text"
         name="filter"
+        placeholder="Find contacts by name"
         onChange={e => dispatch(addFilter(e.currentTarget.value))}
         className={css.filterInput}
       />

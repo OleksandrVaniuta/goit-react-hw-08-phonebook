@@ -1,7 +1,23 @@
 .list {
   list-style: none;
   text-align: center;
+  width: 500px;
+  /* margin: 0; */
   margin: 0 auto;
-  width: 400px;
-  padding: 20px 40px 20px 40px;
+  width: 500px;
+  padding: 0;
+  padding: 0px 25px 0px 25px;
+  height: 45vh;
+  /* overflow: hidden; */
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.list::-webkit-scrollbar {
+  width: 10px; /* ширина для вертикального скролла */
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.list::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 169, 199, 1);
 }

@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/operation';
 // import { FaRegTrashAlt } from 'react-icons/fa';
+import DeleteIcon from '@mui/icons-material/Delete';
+// import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import css from './ContactsItem.module.css';
 
 function ContactsItem({ id, name, number }) {
@@ -12,7 +14,7 @@ function ContactsItem({ id, name, number }) {
       <p className={css.contact}>
         {name}: {number}
       </p>
-      <button
+      {/* <button
         type="button"
         onClick={e => {
           dispatch(deleteContact(id));
@@ -20,9 +22,14 @@ function ContactsItem({ id, name, number }) {
         }}
         className={css.button}
       >
-        {/* <FaRegTrashAlt size={16} className={css.button_icon} /> */}
         delete
-      </button>
+      </button> */}
+      <DeleteIcon
+        onClick={() => {
+          dispatch(deleteContact(id));
+        }}
+        className={css.trashIcon}
+      />
     </li>
   );
 }

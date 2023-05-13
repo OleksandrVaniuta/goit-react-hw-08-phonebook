@@ -2,14 +2,28 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 10px 5px 10px 5px;
+  padding: 5px 5px 5px 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
   justify-content: space-between;
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  width: 100%;
+  /* align-items: baseline; */
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.item:hover {
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.7);
+  scale: 1.03;
 }
 
 .contact {
   display: block;
   margin: 0;
+  padding-top: 4px;
+  font-size: 18px;
   /* width: 200px; */
 }
 .button {
@@ -37,4 +51,8 @@
   text-align: center;
   align-items: center;
   padding-left: 180px;
+}
+
+.trashIcon:hover {
+  fill: rgba(157, 4, 4, 0.88);
 }

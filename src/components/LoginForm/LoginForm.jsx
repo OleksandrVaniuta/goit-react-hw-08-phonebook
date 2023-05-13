@@ -5,7 +5,7 @@ import css from './LoginForm.module.css';
 export const LoginForm = () => {
   const dispatch = useDispatch();
 
-  const hebdleSubmit = e => {
+  const habdleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
     dispatch(
@@ -18,7 +18,7 @@ export const LoginForm = () => {
   };
 
   return (
-    <form onSubmit={hebdleSubmit} className={css.form}>
+    <form onSubmit={habdleSubmit} className={css.form}>
       <label className={css.contactName}>
         Email
         <input type="email" name="email" className={css.contactNameInput} />

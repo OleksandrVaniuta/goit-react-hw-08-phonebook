@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/operation';
 import { selectContacts } from 'redux/selectors';
 
-import { nanoid } from 'nanoid';
+// import { nanoid } from 'nanoid';
 import css from './ContactForm.module.css';
 
 export default function ContactForm() {
@@ -19,9 +19,8 @@ export default function ContactForm() {
 
     const contact = {
       name: name,
-      phone: number,
+      number: number,
     };
-    contact.id = nanoid();
 
     if (onclone) {
       alert(`${contact.name} is already in contacts.`);
