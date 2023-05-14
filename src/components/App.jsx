@@ -7,6 +7,7 @@ import { refresh } from 'redux/Auth/AuthOperations';
 import { selectIsRefreshing } from 'redux/Auth/AuthSelectors';
 import { PrivateRoute } from './PriviteRoute';
 import { PublicRoute } from './PublicRoute';
+import Loader from 'components/loader';
 
 const LoginPage = lazy(() => import('../pages/Login'));
 const RegisterPage = lazy(() => import('../pages/Register'));
@@ -22,7 +23,7 @@ export default function App() {
   }, [dispatch]);
 
   return refteshing ? (
-    <b>Refreshing...</b>
+    <Loader />
   ) : (
     <main className={css.box}>
       <Routes>
