@@ -9,6 +9,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   padding-top: 5vh;
   font-family: 'Roboto', sans-serif;
+  background-image: url('./Images/background_1.jpg');
+  background-position: center;
 }
 
 code {

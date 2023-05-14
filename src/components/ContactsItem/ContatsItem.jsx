@@ -3,12 +3,13 @@ import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/operation';
 // import { FaRegTrashAlt } from 'react-icons/fa';
 import DeleteIcon from '@mui/icons-material/Delete';
-// import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import PhoneIcon from '@mui/icons-material/Phone';
 import css from './ContactsItem.module.css';
 
 function ContactsItem({ id, name, number }) {
   const dispatch = useDispatch();
 
+  const telNum = `tel:+${{ number }}`;
   return (
     <li key={id} className={css.item}>
       <p className={css.contact}>
@@ -24,12 +25,17 @@ function ContactsItem({ id, name, number }) {
       >
         delete
       </button> */}
-      <DeleteIcon
-        onClick={() => {
-          dispatch(deleteContact(id));
-        }}
-        className={css.trashIcon}
-      />
+      <div>
+        <a href={telNum} className={css.contactsLink}>
+          <PhoneIcon className={css.call} />
+        </a>
+        <DeleteIcon
+          onClick={() => {
+            dispatch(deleteContact(id));
+          }}
+          className={css.trashIcon}
+        />
+      </div>
     </li>
   );
 }

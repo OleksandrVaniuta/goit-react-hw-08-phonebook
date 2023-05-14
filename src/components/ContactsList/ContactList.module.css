@@ -16,6 +16,7 @@
 .list::-webkit-scrollbar {
   width: 10px; /* ширина для вертикального скролла */
   background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
 }
 
 .list::-webkit-scrollbar-thumb {
