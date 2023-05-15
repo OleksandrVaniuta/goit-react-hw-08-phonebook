@@ -15,7 +15,7 @@ export const Navigation = () => {
             {
               fontSize: 40,
               color: '#91d5f3',
-              mt: 1,
+              display: 'block',
               mr: 1,
             },
             { '&:hover': { color: '#ffffff' } },
@@ -30,7 +30,7 @@ export const Navigation = () => {
             {
               fontSize: 36,
               color: '#91d5f3',
-              mt: 1,
+              display: 'block',
             },
             { '&:hover': { color: '#ffffff' } },
           ]}
