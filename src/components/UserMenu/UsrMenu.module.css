@@ -10,12 +10,3 @@
   align-items: center;
   margin-right: 15px;
 }
-
-.Logout {
-  font-size: 32px;
-  fill: rgba(118, 203, 240, 1);
-}
-
-.Logout:hover {
-  fill: white;
-}

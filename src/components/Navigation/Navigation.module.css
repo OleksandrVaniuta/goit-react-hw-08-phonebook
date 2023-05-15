@@ -3,9 +3,9 @@
   align-items: center;
   margin-left: 15px;
 }
-.Home {
+/* .Home {
   display: block;
-  /* width: 40px; */
+  width: 40px;
   font-size: 40px;
   fill: rgba(118, 203, 240, 0.8);
   margin-right: 10px;
@@ -23,4 +23,4 @@
 
 .Contacts:hover {
   fill: white;
-}
+} */

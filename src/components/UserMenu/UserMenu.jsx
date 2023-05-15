@@ -20,9 +20,13 @@ export const UserMenu = () => {
       <LogoutIcon
         className={css.Logout}
         onClick={() => dispatch(logout())}
-        sx={{
-          fontSize: 32,
-        }}
+        sx={[
+          {
+            fontSize: 32,
+            color: '#91d5f3',
+          },
+          { '&:hover': { color: '#ffffff' } },
+        ]}
       />
     </div>
   );

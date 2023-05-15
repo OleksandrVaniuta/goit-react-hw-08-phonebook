@@ -11,20 +11,29 @@ export const Navigation = () => {
       <NavLink to="/">
         <HomeIcon
           className={css.Home}
-          sx={{
-            fontSize: 40,
-            // display: block,
-          }}
+          sx={[
+            {
+              fontSize: 40,
+              color: '#91d5f3',
+              mt: 1,
+              mr: 1,
+            },
+            { '&:hover': { color: '#ffffff' } },
+          ]}
         />
       </NavLink>
       {/* {isLoggedIn && ( */}
       <NavLink to="/contacts">
         <PermContactCalendarIcon
           className={css.Contacts}
-          sx={{
-            fontSize: 36,
-            // display: block,
-          }}
+          sx={[
+            {
+              fontSize: 36,
+              color: '#91d5f3',
+              mt: 1,
+            },
+            { '&:hover': { color: '#ffffff' } },
+          ]}
         />
       </NavLink>
       {/* )} */}
