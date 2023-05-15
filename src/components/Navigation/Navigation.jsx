@@ -9,11 +9,23 @@ export const Navigation = () => {
   return (
     <nav className={css.Nav}>
       <NavLink to="/">
-        <HomeIcon className={css.Home} />
+        <HomeIcon
+          className={css.Home}
+          sx={{
+            fontSize: 40,
+            // display: block,
+          }}
+        />
       </NavLink>
       {/* {isLoggedIn && ( */}
       <NavLink to="/contacts">
-        <PermContactCalendarIcon className={css.Contacts} />
+        <PermContactCalendarIcon
+          className={css.Contacts}
+          sx={{
+            fontSize: 36,
+            // display: block,
+          }}
+        />
       </NavLink>
       {/* )} */}
     </nav>

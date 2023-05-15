@@ -17,7 +17,13 @@ export const UserMenu = () => {
       {/* <button type="button" onClick={() => dispatch(logout())}>
         Logout
       </button> */}
-      <LogoutIcon className={css.Logout} onClick={() => dispatch(logout())} />
+      <LogoutIcon
+        className={css.Logout}
+        onClick={() => dispatch(logout())}
+        sx={{
+          fontSize: 32,
+        }}
+      />
     </div>
   );
 };
