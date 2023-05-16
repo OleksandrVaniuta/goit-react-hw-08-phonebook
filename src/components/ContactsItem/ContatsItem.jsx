@@ -15,16 +15,6 @@ function ContactsItem({ id, name, number }) {
       <p className={css.contact}>
         {name}: {number}
       </p>
-      {/* <button
-        type="button"
-        onClick={e => {
-          dispatch(deleteContact(id));
-          e.target.textContent = 'deteling....';
-        }}
-        className={css.button}
-      >
-        delete
-      </button> */}
       <div>
         <a href={telNum} className={css.contactsLink}>
           <PhoneIcon className={css.call} />

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/operation';
 import { selectContacts } from 'redux/selectors';
+import { toast } from 'react-toastify';
 
-// import { nanoid } from 'nanoid';
 import css from './ContactForm.module.css';
 
 export default function ContactForm() {
@@ -23,11 +23,30 @@ export default function ContactForm() {
     };
 
     if (onclone) {
-      alert(`${contact.name} is already in contacts.`);
+      toast.error('contact with this name already exists', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
       return;
     }
 
     dispatch(addContact(contact));
+    toast.info(`${contact.name} contact created`, {
+      position: 'top-right',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'light',
+    });
     resetForm();
   };
 

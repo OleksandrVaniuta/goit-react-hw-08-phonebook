@@ -26,13 +26,21 @@ function ContactsList() {
   }, [dispatch]);
 
   return (
-    <ul className={css.list}>
+    <ul
+      className={css.list}
+      // style={contacts.length === 0 && { overflow: 'hidden' }}
+    >
       {isLoading && !error && <Loader />}
       {error && <b>{error}</b>}
-      {contacts.length > 0 &&
+      {contacts.length > 0 ? (
         visibleEl.map(({ id, name, number }) => {
           return <ContactsItem key={id} id={id} name={name} number={number} />;
-        })}
+        })
+      ) : (
+        <p className={css.emptyContacts}>
+          you don't have any contact yet, create the first one
+        </p>
+      )}
     </ul>
   );
 }

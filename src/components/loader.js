@@ -7,7 +7,7 @@ function Loader() {
       <Oval
         height={25}
         width={25}
-        color="rgba(0, 169, 199, 1)"
+        color="#00a9c7"
         wrapperStyle={{}}
         wrapperClass=""
         visible={true}

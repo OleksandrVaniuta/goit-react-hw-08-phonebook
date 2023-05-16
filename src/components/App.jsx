@@ -7,7 +7,10 @@ import { refresh } from 'redux/Auth/AuthOperations';
 import { selectIsRefreshing } from 'redux/Auth/AuthSelectors';
 import { PrivateRoute } from './PriviteRoute';
 import { PublicRoute } from './PublicRoute';
-import Loader from 'components/loader';
+// import Loader from 'components/loader';
+import Loader from './Loader/Loader';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const LoginPage = lazy(() => import('../pages/Login'));
 const RegisterPage = lazy(() => import('../pages/Register'));
@@ -52,6 +55,18 @@ export default function App() {
           />
         </Route>
       </Routes>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </main>
   );
 }

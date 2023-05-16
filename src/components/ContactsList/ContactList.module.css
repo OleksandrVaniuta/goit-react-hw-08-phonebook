@@ -23,3 +23,10 @@
 .list::-webkit-scrollbar-thumb {
   background-color: rgba(0, 169, 199, 1);
 }
+
+.emptyContacts {
+  font-family: 'Roboto', cursive;
+  font-size: 26px;
+  padding-top: 50px;
+  color: rgba(0, 0, 0, 0.5);
+}
