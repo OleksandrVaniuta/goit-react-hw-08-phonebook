@@ -14,9 +14,24 @@
   color: rgba(0, 0, 0, 0.7);
 }
 
+@keyframes changeIconColor {
+  0% {
+    fill: rgba(0, 0, 0, 0.7);
+  }
+
+  50% {
+    fill: rgba(0, 169, 199, 1);
+  }
+
+  100% {
+    fill: rgba(0, 0, 0, 0.7);
+  }
+}
+
 .item:hover {
   box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.7);
   scale: 1.02;
+  transition: scale 400ms linear;
 }
 
 .contact {
@@ -65,4 +80,5 @@
 
 .call:hover {
   color: rgba(0, 169, 199, 1);
+  animation: changeIconColor 2s infinite;
 }

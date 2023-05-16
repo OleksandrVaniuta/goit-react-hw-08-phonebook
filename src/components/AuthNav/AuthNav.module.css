@@ -30,4 +30,5 @@
 .AuthLogIn:hover,
 .AuthLogIn:focus {
   background-color: rgba(118, 203, 240, 0.1);
+  transition: background-color 500ms linear;
 }
