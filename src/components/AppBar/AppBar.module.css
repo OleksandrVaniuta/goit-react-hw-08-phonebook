@@ -20,7 +20,7 @@
 
 .headerNAv:hover {
   background: linear-gradient(45deg, #00a9c7, #40c0ef, #00a9c7);
-  animation: gradient 7s ease;
+  animation: gradient 7s ease infinite;
   background-size: 400% 400%;
 }
 
