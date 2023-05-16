@@ -28,7 +28,11 @@ function ContactsList() {
   return (
     <ul
       className={css.list}
-      // style={contacts.length === 0 && { overflow: 'hidden' }}
+      style={
+        contacts.length === 0
+          ? { overflowY: 'hidden' }
+          : { overflowY: 'scroll' }
+      }
     >
       {isLoading && !error && <Loader />}
       {error && <b>{error}</b>}
