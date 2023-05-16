@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/operation';
-// import { FaRegTrashAlt } from 'react-icons/fa';
+
 import DeleteIcon from '@mui/icons-material/Delete';
 import PhoneIcon from '@mui/icons-material/Phone';
 import css from './ContactsItem.module.css';
+import { toast } from 'react-toastify';
 
 function ContactsItem({ id, name, number }) {
   const dispatch = useDispatch();
@@ -22,6 +23,16 @@ function ContactsItem({ id, name, number }) {
         <DeleteIcon
           onClick={() => {
             dispatch(deleteContact(id));
+            toast.info(`${name} removed from your contacts`, {
+              position: 'top-right',
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: 'light',
+            });
           }}
           className={css.trashIcon}
         />
