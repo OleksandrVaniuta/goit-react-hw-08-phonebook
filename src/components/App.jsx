@@ -7,9 +7,8 @@ import { refresh } from 'redux/Auth/AuthOperations';
 import { selectIsRefreshing } from 'redux/Auth/AuthSelectors';
 import { PrivateRoute } from './PriviteRoute';
 import { PublicRoute } from './PublicRoute';
-// import Loader from 'components/loader';
 import Loader from './Loader/Loader';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const LoginPage = lazy(() => import('../pages/Login'));
