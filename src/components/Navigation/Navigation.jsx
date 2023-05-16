@@ -17,6 +17,7 @@ export const Navigation = () => {
               color: '#91d5f3',
               display: 'block',
               mr: 1,
+              cursor: 'pointer',
             },
             { '&:hover': { color: '#ffffff' } },
           ]}
@@ -31,6 +32,7 @@ export const Navigation = () => {
               fontSize: 36,
               color: '#91d5f3',
               display: 'block',
+              cursor: 'pointer',
             },
             { '&:hover': { color: '#ffffff' } },
           ]}

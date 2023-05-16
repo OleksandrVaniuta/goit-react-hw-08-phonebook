@@ -24,6 +24,7 @@ export const UserMenu = () => {
           {
             fontSize: 32,
             color: '#91d5f3',
+            cursor: 'pointer',
           },
           { '&:hover': { color: '#ffffff' } },
         ]}

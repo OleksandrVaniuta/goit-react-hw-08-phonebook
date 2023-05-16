@@ -59,6 +59,7 @@
   padding: 5px 10px;
   font-weight: 700;
   transition: box-shadow 500ms linear;
+  cursor: pointer;
 }
 
 .createBtn:hover,
