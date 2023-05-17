@@ -34,7 +34,7 @@ function ContactsList() {
     >
       {isLoading && !error && <Loader />}
       {error && <b>{error}</b>}
-      {contacts.length > 0 && !isLoading ? (
+      {contacts.length > 0 ? (
         visibleEl.map(({ id, name, number }) => {
           return <ContactsItem key={id} id={id} name={name} number={number} />;
         })
