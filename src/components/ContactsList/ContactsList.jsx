@@ -29,14 +29,12 @@ function ContactsList() {
     <ul
       className={css.list}
       style={
-        contacts.length === 0
-          ? { overflowY: 'hidden' }
-          : { overflowY: 'scroll' }
+        contacts.length < 11 ? { overflowY: 'hidden' } : { overflowY: 'scroll' }
       }
     >
       {isLoading && !error && <Loader />}
       {error && <b>{error}</b>}
-      {contacts.length > 0 ? (
+      {contacts.length > 0 && !isLoading ? (
         visibleEl.map(({ id, name, number }) => {
           return <ContactsItem key={id} id={id} name={name} number={number} />;
         })
